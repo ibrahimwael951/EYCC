@@ -15,11 +15,11 @@ const Hero = () => {
         Egyptian Youth Cybersecurity Challenge
       </h1>
       <p className="text-xl text-neutral-400 font-semibold text-center">
-        The first Cyber Security Competition for Egyptian Youth    
+        The first Cyber Security Competition for Egyptian Youth
       </p>
       <div className="flex justify-center items-center gap-10">
         <SignInButton>
-          <Button text="sign in" />
+          <Button transBg={false} text="sign in" /> 
         </SignInButton>
 
         <Link href="/about">
