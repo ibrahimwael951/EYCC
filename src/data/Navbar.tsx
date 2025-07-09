@@ -1,16 +1,22 @@
-import { BugOff, LucideIcon, Settings, User } from "lucide-react";
+import {
+  LucideIcon,
+  Scale,
+  User,
+  Swords,
+  Database,
+  ShieldQuestionMark,
+} from "lucide-react";
 
-interface NavData {
+interface NavData { 
   title: string;
   href: string;
   icon: LucideIcon;
-}  
+}
 
 export const navData: NavData[] = [
   { title: "About ", href: "/About ", icon: User },
-  { title: "FAQs ", href: "/FAQs ", icon: Settings },
-  { title: "Rules", href: "/Rules", icon: BugOff },
-  { title: "Challenges ", href: "/Challenges ", icon: BugOff },
-  { title: "Resources  ", href: "/Resources ", icon: BugOff },
-   
+  { title: "FAQ ", href: "/faq", icon: ShieldQuestionMark },
+  { title: "Rules", href: "/Rules", icon: Scale },
+  { title: "Challenges ", href: "/Challenges ", icon: Swords },
+  { title: "Resources  ", href: "/Resources ", icon: Database },
 ];

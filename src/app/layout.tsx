@@ -2,13 +2,25 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
-import { Fira_Code } from "next/font/google";
+import localFont from "next/font/local";
+
 import Footer from "@/components/Footer";
 
-const firaCode = Fira_Code({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-fira-code",
+const myFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Hacked-KerX.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Hacked-KerX.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-my-font",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${firaCode.className}`}>
+    <html lang="en" className={myFont.variable}>
+      <body className={`${myFont.className}`}> 
         <Navbar />
         {children}
         <Footer />
