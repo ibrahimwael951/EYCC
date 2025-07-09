@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FadeUp, Rotate_Scale_Tap, ViewPort } from "@/animation/Animations";
+import { FadeUp, Rotate_Scale_Tap } from "@/animation/Animations";
+import Link from "next/link";
 
 interface Props {
   text: string;
@@ -9,6 +10,8 @@ interface Props {
   transBg?: boolean;
   className?: string;
   animate?: boolean;
+  delay?: number;
+  href?: string;
 }
 
 const Button: React.FC<Props> = ({
@@ -17,15 +20,39 @@ const Button: React.FC<Props> = ({
   className = "",
   rotate = true,
   transBg = true,
+  delay = 0,
+  href,
 }) => {
+  if (href)
+    return (
+      <Link href={href} className="cursor-pointer">
+        <Button
+          text={text}
+          animate={animate}
+          className={className}
+          delay={delay}
+          rotate={rotate}
+          transBg={transBg}
+        />
+      </Link>
+    );
   return (
     <motion.button
-      {...(animate && FadeUp)}
-      {...(animate && ViewPort)}
       {...(rotate && Rotate_Scale_Tap)}
+      {...(animate && FadeUp)}
+      {...(animate && {
+        viewport: { once: true, amount: 0.5 },
+        whileInView: {
+          y: 0,
+          x: 0,
+          scale: 1,
+          opacity: 1,
+          transition: { delay: delay },
+        },
+      })}
       className={` 
                 ${className}
-                rounded-2xl p-3 duration-150 border border-green-600
+                rounded-2xl p-3 duration-150 border border-green-600 cursor-pointer
                 ${
                   transBg
                     ? "bg-transparent hover:bg-green-600 hover:text-white text-green-600"

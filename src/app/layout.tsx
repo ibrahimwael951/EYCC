@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+
 import Navbar from "@/components/Navbar";
-import { Fira_Code } from 'next/font/google'
+import BottomBlur from "@/components/ui/BottomBlur";
+import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], 
-  variable: '--font-fira-code', 
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-fira-code",
+});
 
 export const metadata: Metadata = {
   title: "EYCC",
@@ -21,13 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${firaCode.className}`}>   
-          <Navbar />
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${firaCode.className}`}>
+        <Navbar />
+        {children} 
+        <BottomBlur/>
+      </body>
+    </html>
   );
 }
