@@ -8,7 +8,7 @@ import Background from "@/components/Animation_Components/Loader1";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen px-5 lg:px-10 2xl:px-20 flex flex-col gap-4 justify-center items-center ">
+    <section className="min-h-screen px-5 lg:px-10 2xl:px-20 flex flex-col gap-4 justify-center items-center overflow-hidden ">
       <motion.p
         {...FadeUp}
         {...ViewPort}
@@ -39,7 +39,7 @@ const Hero = () => {
         <Button href="/register" delay={0.5} transBg={false} text="Register" />
         <Button href="/about" delay={0.6} text="About Us" />
       </div>
-      <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-40 scale-200 -z-20">
+      <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-40 scale-125 md:scale-200 -z-20">
         <Background />
       </div>
     </section>

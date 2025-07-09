@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="relative min-h-80   p-5 lg:p-10  ">
       {/* Bg and Animate component */}
-      <div className="absolute -top-10 left-2/4 -translate-x-2/4 scale-75 md:scale-125 -z-10 ">
+      <div className="absolute -top-10 left-2/4 -translate-x-2/4 scale-50 md:scale-125 -z-10 ">
         <Loader4 />
       </div>
       <div className="w-full h-full absolute top-0 left-0 bg-neutral-600/10 backdrop-blur-sm -z-10" />
