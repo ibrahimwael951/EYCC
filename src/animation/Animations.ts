@@ -21,3 +21,7 @@ export const FadeLeft = {
 export const Rotate_Scale_Tap = {
   whileTap: { rotateZ: -6, scale: 0.94, transition: { duration: 0.04 } },
 };
+export const opacity={
+  initial:{opacity:0},
+  whileInView:{opacity:1}
+}

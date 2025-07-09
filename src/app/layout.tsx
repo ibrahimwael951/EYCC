@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
-import BottomBlur from "@/components/ui/BottomBlur";
 import { Fira_Code } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -25,8 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${firaCode.className}`}>
         <Navbar />
-        {children} 
-        <BottomBlur/>
+        {children}
+        <Footer />
       </body>
     </html>
   );
