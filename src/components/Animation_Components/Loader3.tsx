@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styles from "./CSS/Hero.module.css";
-import { opacity } from "@/animation/Animations";
+import { opacityWithBlur } from "@/animation/Animations";
 
 const Loader3 = () => {
   return (
-    <motion.div {...opacity}  className={styles.container3}>
+    <motion.div {...opacityWithBlur}  className={styles.container3}>
         <div className={styles.top3}>
           <div className={styles.square3}>
             <div className={styles.square3}>

@@ -1,5 +1,8 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 import BackGround from "@/components/Animation_Components/Loader3";
+import { BlurAnimate } from "@/animation/Animations";
 const Why_Participate = () => {
   const WHY = [
     "Join Egypt’s first-ever cybersecurity competition & community for high schoolers",
@@ -8,25 +11,28 @@ const Why_Participate = () => {
 
   return (
     <section className="min-h-screen px-5 lg:px-10 2xl:px-20 ">
-      <h1 className="text-4xl md:text-5xl">
+      <motion.h1
+        {...BlurAnimate}
+        className="text-4xl md:text-5xl"
+      >
         Why
         <span className="text-green-600"> Participate </span> ?
-      </h1>
+      </motion.h1>
       <div className="relative   flex gap-20 justify- evenly items-start overflow-hidden ">
         <div className="md:w-2/4 ml-4 my-5 flex flex-col gap-4 ">
           {WHY.map((item) => (
-            <p key={item} className="text-xl">
+            <motion.p {...BlurAnimate} key={item} className="text-xl">
               _{item}
-            </p>
+            </motion.p>
           ))}
           <div>
-            <h1 className="text-4xl md:text-5xl ">
+            <motion.h1 {...BlurAnimate} className="text-4xl md:text-5xl ">
               No<span className="text-green-600"> Experience </span>?
-            </h1>
-            <p className="text-xl">
+            </motion.h1>
+            <motion.p {...BlurAnimate} className="text-xl">
               No Problem, it is your chance for start learning and competing
               with others!
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="hidden md:inline opacity-35  md:opacity-100 -z-10 absolute right-2/4 -translate-x-2/4 md:right-1/5 top-32  md:translate-x-0 md: w-fit scale-125">

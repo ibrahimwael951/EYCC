@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styles from "./CSS/Hero.module.css";
-import { opacity } from "@/animation/Animations";
+import { opacityWithBlur } from "@/animation/Animations";
 const Loader2 = () => {
   return (
-    <motion.div {...opacity} className="scale-200 overflow-hidden w-50">
+    <motion.div {...opacityWithBlur} className="scale-200 overflow-hidden w-50">
       <div className={styles.loader2}>
         <div className={styles.bar1}></div>
         <div className={styles.bar2}></div>

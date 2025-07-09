@@ -47,6 +47,7 @@ const Button: React.FC<Props> = ({
           x: 0,
           scale: 1,
           opacity: 1,
+          filter: "blur(0px)",
           transition: { delay: delay },
         },
       })}
