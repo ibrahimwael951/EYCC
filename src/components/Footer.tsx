@@ -9,7 +9,7 @@ import { FadeLeft, FadeRight, ViewPort } from "@/animation/Animations";
 
 const Footer = () => {
   return (
-    <footer className="relative min-h-80 p-5 lg:p-10 mt-20 md:mt-60 ">
+    <footer className="relative min-h-80 p-5 lg:p-10 mt-80 ">
       {/* Bg and Animate component */}
       <div className="absolute -top-10 left-2/4 -translate-x-2/4 scale-50 md:scale-125 -z-10 ">
         <Loader4 />

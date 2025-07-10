@@ -37,7 +37,7 @@ const Hero = () => {
       </motion.p>
       <div className="flex justify-center items-center gap-10">
         <Button href="/register" delay={0.5} transBg={false} text="Register" />
-        <Button href="/about" delay={0.6} text="About Us" />
+        <Button href="/About" delay={0.6} text="About Us" />
       </div>
       <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-40 scale-125 md:scale-200 -z-20">
         <Background />
