@@ -155,8 +155,8 @@ export default function Page() {
                   <h1 className="text-3xl text-center font-semibold mt-3">
                     {item.title}
                   </h1>
-                </motion.div>
-              </Link>
+                </motion.div>  
+              </Link> 
             ))}
           </div>
         </div>

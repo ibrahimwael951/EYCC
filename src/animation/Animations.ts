@@ -9,20 +9,24 @@ export const Animate = {
 };
 export const FadeUp = {
   initial: { y: 60, opacity: 0, filter: "blur(20px)" },
+  exit: { y: 60, opacity: 0, filter: "blur(20px)" },
 };
 export const FadeDown = {
   initial: { y: -60, opacity: 0, filter: "blur(20px)" },
+  exit: { y: -60, opacity: 0, filter: "blur(20px)" },
 };
 export const FadeRight = {
   initial: { x: 60, opacity: 0, filter: "blur(20px)" },
+  exit: { x: 60, opacity: 0, filter: "blur(20px)" },
 };
 export const FadeLeft = {
   initial: { x: -60, opacity: 0, filter: "blur(20px)" },
+  exit: { x: -60, opacity: 0, filter: "blur(20px)" },
 };
 export const Rotate_Scale_Tap = {
   whileTap: { rotateZ: -6, scale: 0.94, transition: { duration: 0.04 } },
 };
-export const opacity = {  
+export const opacity = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
 };
