@@ -11,8 +11,8 @@ import { Menu } from "lucide-react";
 const Navbar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
   return (
-    <>
-      <motion.nav
+    <nav>
+      <motion.div
         {...FadeDown}
         {...Animate}
         className="select-none fixed top-0 left-2/4 -translate-x-2/4 w-full max-w-6xl flex justify-between items-center p-3 z-50"
@@ -27,6 +27,7 @@ const Navbar = () => {
             width={500}
             height={500}
             className="w-10 h-10 rounded-full"
+            suppressHydrationWarning={true}
           />
           EYCC
         </Link>
@@ -54,7 +55,7 @@ const Navbar = () => {
             <Menu size={34} />
           </button>
         </div>
-      </motion.nav>
+      </motion.div>
         <AnimatePresence>
           {isMenuOpened && (
             <motion.div
@@ -63,7 +64,7 @@ const Navbar = () => {
               exit={{ y: -100, opacity: 0 }}
               className="fixed top-0 pt-20 p-5 w-full z-40 md:hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-full bg-neutral-900/10 backdrop-blur-xl  -z-10" />
+              <div className="absolute top-0 left-0 w-full h-full bg-neutral-900/10 backdrop-blur-xl  -z-10" /> 
               <div className="flex flex-col gap-4">
                 {navData.map((item) => (
                   <Link
@@ -79,7 +80,7 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-    </>
+    </nav>
   );
 };
 

@@ -1,0 +1,119 @@
+
+.loader5 {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react_star5 {
+  position: relative;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  animation: rotate5 3s infinite;
+}
+
+.nucleus5 {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(#0ee807, rgb(166, 255, 0));
+  height: 2rem;
+  width: 2rem;
+  animation: rotate5 1s linear infinite;
+}
+
+.electron5 {
+  position: absolute;
+  width: 15rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.3rem solid #1eff00;
+  animation: revolve5 1s linear infinite;
+}
+
+.electron15::before,
+.electron25::before,
+.electron35::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+  border-radius: 50%;
+  animation: moveElectron5 1s infinite;
+}
+.electron25 {
+  transform: rotate(60deg);
+  animation-delay: -0.66s;
+}
+.electron25::before {
+  animation-delay: -0.66s;
+}
+
+.electron35 {
+  transform: rotate(-60deg);
+}
+
+@keyframes rotate5 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) scale3d(1.1, 1.1, 0);
+  }
+}
+
+@keyframes revolve5 {
+  0% {
+    border-color: #51ff009c;
+    border-right: transparent;
+  }
+  25% {
+    border-color: #51ff009c;
+    border-bottom-color: transparent;
+  }
+  50% {
+    border-color: #51ff009c;
+    border-left-color: transparent;
+  }
+  75% {
+    border-color: #51ff009c;
+    border-top-color: transparent;
+  }
+  100% {
+    border-color: #51ff009c;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes moveElectron5 {
+  0% {
+    top: 60%;
+    left: 100%;
+  }
+  25% {
+    top: 100%;
+    left: 60%;
+  }
+  50% {
+    top: 60%;
+    left: 0%;
+  }
+  75% {
+    top: 0%;
+    left: 60%;
+  }
+  100% {
+    top: 60%;
+    left: 100%;
+  }
+}
