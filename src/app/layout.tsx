@@ -2,24 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
-import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 
 import Footer from "@/components/Footer";
 
-const myFont = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Hacked-KerX.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Hacked-KerX.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-my-font",
+const myFont = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -34,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={myFont.variable}>
-      <body className={`${myFont.className}`}> 
+    <html lang="en"> 
+      <body className={`${myFont.className}`}>
         <Navbar />
         {children}
         <Footer />

@@ -50,8 +50,8 @@ export default function Page() {
             students in Egypt. EYCC brings together young cybersecurity
             enthusiasts from across the country to compete, learn, and grow as a
             community. Through a series of well-crafted challenges, the
-            competition tests participants' foundational skills in cybersecurity
-            in a fun and hands-on way. Whether you're new to the field or
+            competition tests participants foundational skills in cybersecurity
+            in a fun and hands-on way. Whether you are new to the field or
             already passionate about hacking, EYCC is your gateway into the
             world of ethical hacking and digital problem-solving.
           </motion.p>
@@ -81,15 +81,15 @@ export default function Page() {
             EYCC follows a Capture The Flag (CTF) format — a popular style of
             cybersecurity competition where participants solve a variety of
             challenges to find “flags,” which are hidden bits of information
-            that prove you’ve completed a task. Each challenge focuses on a
+            that prove you have completed a task. Each challenge focuses on a
             specific area of cybersecurity, like cryptography, web exploitation,
             reverse engineering, or forensics. The more flags you capture, the
             higher you score.
             <br />
             <br />
-            If you're new to this style, don’t worry — we’ve got you covered.
-            You can check out the Challenges page to explore the topics and
-            challenge categories, and head over to the Resources page for
+            If you are new to this style, do not worry — we have got you
+            covered. You can check out the Challenges page to explore the topics
+            and challenge categories, and head over to the Resources page for
             beginner-friendly material to help you prepare.
           </motion.p>
         </div>
@@ -102,7 +102,11 @@ export default function Page() {
 
       <section className="min-h-screen mt-32">
         <div className="flex flex-col justify-center items-center gap-2 text-center max-w-6xl m-auto">
-          <motion.h1 {...FadeUp} {...ViewPort} className="text-5xl mb-3">
+          <motion.h1
+            {...FadeUp}
+            {...ViewPort}
+            className="text-5xl font-semibold mb-3"
+          >
             About <span className="text-green-600"> US </span>
           </motion.h1>
           <motion.p {...FadeUp} {...ViewPort} className="text-2xl">
@@ -114,19 +118,23 @@ export default function Page() {
               {" "}
               STEM Egypt Hack Club{" "}
             </a>
-            , a student-led coding club that's part of Hack Club, a
+            , a student-led coding club that is part of Hack Club, a
             <span className="text-green-600"> global nonprofit </span> that
-            empowers student-led coding communities. We're committed to building
-            a future where every student has access to the tools and community
-            they need to build with technology.
+            empowers student-led coding communities. We are committed to
+            building a future where every student has access to the tools and
+            community they need to build with technology.
           </motion.p>
         </div>
         <div className="mt-20">
-          <motion.h1 {...FadeLeft} {...ViewPort} className="text-3xl  ">
-            We've previously <span className="text-green-600"> organized </span>{" "}
-            several student-led tech{" "}
-            <span className="text-green-600"> events </span> — here are some of
-            our highlights:
+          <motion.h1
+            {...FadeLeft}
+            {...ViewPort}
+            className="text-3xl font-bold  "
+          >
+            We have previously{" "}
+            <span className="text-green-600"> organized </span> several
+            student-led tech <span className="text-green-600"> events </span> —
+            here are some of our highlights:
           </motion.h1>
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-10">
             {Highlight.map((item, i) => (
@@ -134,7 +142,7 @@ export default function Page() {
                 <motion.div
                   {...FadeUp}
                   {...ViewPort}
-                  whileHover={{y:-5}}
+                  whileHover={{ y: -5 }}
                   className="bg-neutral-900 rounded-2xl p-5 border border-green-600"
                 >
                   <Image
