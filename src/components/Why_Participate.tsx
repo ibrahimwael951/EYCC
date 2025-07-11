@@ -10,11 +10,8 @@ const Why_Participate = () => {
   ];
 
   return (
-    <section className="min-h-screen px-5 lg:px-10 2xl:px-20 ">
-      <motion.h1
-        {...BlurAnimate}
-        className="text-4xl md:text-5xl"
-      >
+    <section className=" px-5 lg:px-10 2xl:px-20 ">
+      <motion.h1 {...BlurAnimate} className="text-4xl md:text-5xl font-semibold">
         Why
         <span className="text-green-600"> Participate </span> ?
       </motion.h1>
@@ -26,7 +23,7 @@ const Why_Participate = () => {
             </motion.p>
           ))}
           <div>
-            <motion.h1 {...BlurAnimate} className="text-4xl md:text-5xl ">
+            <motion.h1 {...BlurAnimate} className="text-4xl md:text-5xl font-semibold ">
               No<span className="text-green-600"> Experience </span>?
             </motion.h1>
             <motion.p {...BlurAnimate} className="text-xl">
@@ -35,7 +32,7 @@ const Why_Participate = () => {
             </motion.p>
           </div>
         </div>
-        <div className="hidden md:inline opacity-35  md:opacity-100 -z-10 absolute right-2/4 -translate-x-2/4 md:right-1/5 top-32  md:translate-x-0 md: w-fit scale-125">
+        <div className="hidden md:inline opacity-35  md:opacity-100 -z-10 absolute right-2/4 -translate-x-2/4 md:right-1/5 top-32  md:translate-x-0 md: w-fit scale-125 h-60">
           <BackGround />
         </div>
       </div>

@@ -131,10 +131,8 @@ export default function Page() {
             {...ViewPort}
             className="text-3xl font-bold  "
           >
-            We have previously{" "}
-            <span className="text-green-600"> organized </span> several
-            student-led tech <span className="text-green-600"> events </span> —
-            here are some of our highlights:
+            We have previously organized several student-led tech events — here
+            are some of our highlights:
           </motion.h1>
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-10">
             {Highlight.map((item, i) => (
@@ -143,7 +141,7 @@ export default function Page() {
                   {...FadeUp}
                   {...ViewPort}
                   whileHover={{ y: -5 }}
-                  className="bg-neutral-900 rounded-2xl p-5 border border-green-600"
+                  className=" rounded-2xl p-5 border border-green-600"
                 >
                   <Image
                     src={item.image}
@@ -155,8 +153,8 @@ export default function Page() {
                   <h1 className="text-3xl text-center font-semibold mt-3">
                     {item.title}
                   </h1>
-                </motion.div>  
-              </Link> 
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

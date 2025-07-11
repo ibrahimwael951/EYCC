@@ -92,7 +92,7 @@ export default function Page() {
     setSubmitMessage("");
 
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/2ditgfbaaa3b7", {
+      const response = await fetch(`${process.env.NEXT_LOCAL_API}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -146,8 +146,8 @@ export default function Page() {
     return (
       <main className="min-h-screen px-5 lg:px-10 2xl:px-20 flex justify-center items-center">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading...</p>
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 text-4xl md:text-5xl">Loading...</p>
         </div>
       </main>
     );

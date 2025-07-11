@@ -4,7 +4,6 @@ import { Plus } from "lucide-react";
 import { FAQ as FAQData } from "@/data/FAQ";
 import { motion, AnimatePresence } from "framer-motion";
 import { FadeLeft, Animate, ViewPort, FadeUp } from "@/animation/Animations";
-import Loader5 from "./Animation_Components/Loader5";
 
 const FAQ = () => {
   return (
