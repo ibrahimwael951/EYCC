@@ -142,23 +142,6 @@ export default function Page() {
     }
   };
 
-  const handleReset = () => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("eycc_submitted");
-      localStorage.removeItem("eycc_user_data");
-      localStorage.removeItem("eycc_form_data");
-    }
-    setIsJoined(false);
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      school: "",
-      governorate: "",
-      grade: "",
-    });
-  };
-
   if (loading) {
     return (
       <main className="min-h-screen px-5 lg:px-10 2xl:px-20 flex justify-center items-center">
