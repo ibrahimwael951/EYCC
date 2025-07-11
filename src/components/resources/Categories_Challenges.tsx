@@ -17,6 +17,7 @@ const Categories_Challenges = () => {
         {categories.map((item, i) => (
           <CategoryCard
             key={i}
+            href={`/Resources/#${item.title}`}
             WhatULearn={item.WhatULearn}
             desc={item.desc}
             icon={item.icon}

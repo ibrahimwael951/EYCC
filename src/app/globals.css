@@ -3,3 +3,6 @@
  html{
   @apply bg-black text-white  
  }
+ body{
+    @apply scroll-smooth
+ }

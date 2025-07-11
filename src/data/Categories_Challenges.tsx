@@ -13,21 +13,6 @@ export const Categories_Challenges = [
     desc: "Every time you log in to a website or fill out a form, you're using web applications. But what happens if a website forgets to check itsinput properly?",
     WhatULearn:
       "In Web Exploitation, you’ll learn how attackers trick websites using some techniques",
-    Links: {
-      p1: "This YouTube Playlist covers more than web vulnerabilities, it is the most recommended",
-      link1:
-        "https://www.youtube.com/playlist?list=PLv7cogHXoVhXvHPzIl1dWtBiYUAL8baHj",
-      p2: "PortSwigger hands-on labs for practical learning for each web vulnerability with explanation of topics for each one:",
-      link2: "https://portswigger.net/web-security/dashboard",
-      p3: "Labs of (Web for Pentester I & II) in pentesterlab covers almost all the web vulnerabilities even the advanced ones: ",
-      link3: "https://pentesterlab.com/my/progress#offlinefree",
-      forTools: {
-        p: "Burpsuite is the main tool for web exploitation, as it intercepts and analyzes web requests",
-        p2: "Download link:",
-        link: "https://portswigger.net/burp/communitydownload",
-        p3: "(it is downloaded by default in kali linux) ",
-      },
-    },
   },
   {
     icon: GlobeLock,
