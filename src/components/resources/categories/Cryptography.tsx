@@ -3,7 +3,7 @@ import React from "react";
 
 const Cryptography = () => {
   return (
-    <section id="Cryptography">
+    <section id="Cryptography" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         {" "}
         <GlobeLock size={50} className="text-green-600" /> Cryptography
@@ -19,7 +19,7 @@ const Cryptography = () => {
               className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
               href="https://tryhackme.com/room/cryptographyfordummies"
             >
-              cryptography for dummies
+              Cryptography for dummies
             </a>
           </li>
           <li>
@@ -35,12 +35,12 @@ const Cryptography = () => {
               className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
               href="https://tryhackme.com/room/cyberchefbasics"
             >
-              encryption crypto 101
+              Encryption crypto 101
             </a>
           </li>
         </ul>
-        <p className="mb-5 text-xl">
-          Collection of crypto CTF concepts and tools:
+        <p className="mb-5 text-xl mt-4">
+          Collection of crypto CTF concepts and tools: 
           <a
             className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
             href="https://github.com/ashutosh1206/Crypton"
@@ -50,14 +50,14 @@ const Cryptography = () => {
         </p>
       </div>
       <div>
-        <h1>Main tools for Cryptography:</h1>
-        <p className="mb-5 text-xl">
+        <h1 className="text-3xl">Main tools for Cryptography:</h1>
+        <p className="mb-3 ml-4 text-xl">
           Cyberchef: Visual tool for decoding, encoding, hashing, etc:{" "}
           <a
             className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
             href="https://gchq.github.io/CyberChef"
           >
-            Link
+            DownLoad Link
           </a>
         </p>
       </div>

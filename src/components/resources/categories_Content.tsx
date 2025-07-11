@@ -11,7 +11,7 @@ const categories_Content = () => {
       <h1 className="text-4xl md:text-5xl font-semibold mb-10">
         Categories <span className="text-green-600"> Details </span>
       </h1>
-      <section className="space-y-20">
+      <section className="">
         <Web_Exploitation />
         <hr className="text-green-600" />
         <Cryptography />

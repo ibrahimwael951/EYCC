@@ -3,7 +3,7 @@ import React from "react";
 
 const OSINT = () => {
   return (
-    <section id="OSINT">
+    <section id="OSINT" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <GitPullRequestArrow size={50} className="text-green-600" />
         OSINT

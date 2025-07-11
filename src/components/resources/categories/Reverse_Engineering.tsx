@@ -3,7 +3,7 @@ import React from "react";
 
 const Reverse_Engineering = () => {
   return (
-    <section id="Reverse Engineering">
+    <section id="Reverse Engineering" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <RotateCcw size={50} className="text-green-600" /> Reverse Engineering
       </h1>

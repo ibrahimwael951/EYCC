@@ -33,12 +33,11 @@ const FAQ = () => {
         >
           Providing the best solution, get answers of your common questions.
         </motion.p>
-
       </div>
       <motion.div
         {...FadeUp}
         {...Animate}
-        className="border-t-2 border-l-2 border-green-600 rounded-4xl  h-fit  max-w-5xl mx-auto flex flex-col gap-6 py-6 px-10"
+        className="border-t-2 border-l-2 border-green-600 rounded-4xl  h-fit  max-w-5xl mx-auto flex flex-col gap-6 py-6 px-4 md:px-10"
       >
         {FAQData.map((item, i) => (
           <FAQCard key={i} A={item.A} Q={item.Q} />
@@ -55,7 +54,7 @@ interface props {
 export const FAQCard: React.FC<props> = ({ A, Q }) => {
   const [showA, setShowA] = useState<boolean>(false);
   return (
-    <motion.div {...FadeLeft} {...ViewPort}  className="w-full overflow-hidden ">
+    <motion.div {...FadeLeft} {...ViewPort} className="w-full overflow-hidden ">
       <h1
         onClick={() => setShowA((prev) => !prev)}
         className="flex justify-between items-center cursor-pointer text-xl font-bold select-none py-5"
@@ -65,7 +64,11 @@ export const FAQCard: React.FC<props> = ({ A, Q }) => {
       </h1>
       <AnimatePresence>
         {showA && (
-          <motion.p {...FadeLeft} {...Animate} className="text-lg bg-green-600 rounded-2xl p-2  ">
+          <motion.p
+            {...FadeLeft}
+            {...Animate}
+            className="text-lg bg-green-600 rounded-2xl p-2  "
+          >
             {A}
           </motion.p>
         )}

@@ -129,7 +129,7 @@ export default function Page() {
           <motion.h1
             {...FadeLeft}
             {...ViewPort}
-            className="text-3xl font-bold  "
+            className="text-2xl text-center"
           >
             We have previously organized several student-led tech events — here
             are some of our highlights:

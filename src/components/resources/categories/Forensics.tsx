@@ -3,12 +3,12 @@ import React from "react";
 
 const Forensics = () => {
   return (
-    <section id="Forensics">
+    <section id="Forensics" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <ChartColumn size={50} className="text-green-600" />
         Forensics
       </h1>
-      <div className="p-5 rounded-2xl bg-red-600 text-white text-2xl">
+      <div className="p-2 mb-5 w-fit rounded-2xl bg-red-950 text-white text-sm ">
         Note: the competition is focused on “image forensics”
       </div>
       <ul className="list-disc list-inside space-y-5 text-xl mb-5">
