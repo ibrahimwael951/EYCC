@@ -1,7 +1,7 @@
 import React from "react";
 import { LucideIcon } from "lucide-react";
 interface props {
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   title: string;
   desc: string;
   WhatULearn: string;
