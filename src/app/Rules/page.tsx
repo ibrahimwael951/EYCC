@@ -5,8 +5,8 @@ import { FadeLeft, ViewPort } from "@/animation/Animations";
 
 export default function Page() {
   return (
-    <section className="min-h-screen px-5 lg:px-10 2xl:px-20 mt-20">
-      <section>
+    <section className="min-h-screen px-5 lg:px-10 2xl:px-20 mt-20 space-y-20">
+      <section className=" ">
         <motion.div
           {...FadeLeft}
           {...ViewPort}
@@ -15,50 +15,55 @@ export default function Page() {
           <div className="w-3 h-3 animate-pulse bg-green-600 rounded-full " />
           Rules
         </motion.div>
-        <h1 className="text-4xl md:text-5xl font-semibold mb-4">
+        <motion.h1
+          {...FadeLeft}
+          {...ViewPort}
+          className="text-4xl md:text-5xl font-semibold mb-4"
+        >
           Competition Format
-        </h1>
-        <p className="text-2xl mb-10">
+        </motion.h1>
+        <motion.p {...FadeLeft} {...ViewPort} className="text-2xl mb-10">
           The Egyptian Youth Cybersecurity Challenge (EYCC) will take place in
-          two main rounds:”
-        </p>
-        <div className="my-10">
+          two main rounds
+        </motion.p>
+        <motion.div {...FadeLeft} {...ViewPort} className="my-20">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
             <span className="text-green-600"> Round 1 </span> – Online
             Qualification Round
           </h1>
           <ul className="list-inside list-disc md:ml-4 text-xl font-bold text-neutral-400">
-            <li>Date: August x, 2025</li>
-            <li>Duration: Continuous 48 hours</li>
             <li>
-              Goal: Solve as many challenges as you can and submit your Flags to
-              earn points and climb the leaderboard.
+              A Capture The Flag (CTF) round where participants will solve 12
+              cybersecurity challenges across different categories.
             </li>
             <li>
-              Challenges: The online round will consist of 12 challenges: 4 in
-              Web Exploitation, 3 in OSINT, 3 in Cryptography, 2 in Forensics,
-              and 1 in Reverse Engineering.
+              The round will run for 48 continuous hours, during which
+              participants can solve challenges at their own pace.
             </li>
-            <li>Top teams will qualify for the next round.</li>
+            <li>Each challenge has a point value based on its difficulty.</li>
+            <li>Points are awarded only when the correct flag is submitted.</li>
+            <li>The leaderboard updates in real-time as teams submit flags.</li>
+            <li>
+              In case of a tie in total points, the team with the earlier
+              submission time ranks higher.
+            </li>
           </ul>
-        </div>
-        <div className="my-10">
+        </motion.div>
+        <motion.div {...FadeLeft} {...ViewPort} className="my-20">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
             <span className="text-green-600"> Round 2 </span> – On-site Final
             Round
           </h1>
-          <ul className="list-inside list-disc md:ml-4 text-xl font-bold text-neutral-400">
-            <li>
-              Held physically for qualified teams at a selected location in
-              Egypt (Will be detected soon).
-            </li>
-            <li>More advanced challenges</li>
-            <li>Winning teams will be announced and awarded.</li>
-          </ul>
-        </div>
+          <p className="md:ml-4 text-xl font-bold text-neutral-400">
+            Top-performing teams from the online qualification round will be
+            invited to compete in the on-site final round. More details about
+            the date, location, and format of this round will be announced
+            soon.”
+          </p>
+        </motion.div>
       </section>
-      <section>
-        <div className="my-10">
+      <section className="space-y-20">
+        <motion.div {...FadeLeft} {...ViewPort} className="my-20">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
             Team <span className="text-green-600"> Rules </span>{" "}
           </h1>
@@ -77,24 +82,10 @@ export default function Page() {
               team setup.
             </li>
           </ul>
-        </div>
-        <div className="my-10">
+        </motion.div>
+        <motion.div {...FadeLeft} {...ViewPort} className="my-20">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
-            Scoring <span className="text-green-600"> System </span>{" "}
-          </h1>
-          <ul className="list-inside list-disc md:ml-4 text-xl font-bold text-neutral-400">
-            <li>Each challenge has a point value based on difficulty</li>
-            <li>Points are awarded only when the correct flag is submitted</li>
-            <li>The leaderboard updates in real-time.</li>
-            <li>
-              In case of ties, the winning team will depend on the time taken to
-              submit the flags.
-            </li>
-          </ul>
-        </div>
-        <div className="my-10">
-          <h1 className="text-4xl md:text-5xl font-semibold mb-4">
-            Some <span className="text-green-600"> Important</span> Rules
+            Competition <span className="text-green-600"> Rules </span>{" "}
           </h1>
           <ul className="list-inside list-disc md:ml-4 text-xl font-bold text-neutral-400">
             <li>
@@ -111,7 +102,7 @@ export default function Page() {
               is allowed during the competition.
             </li>
           </ul>
-        </div>
+        </motion.div>
       </section>
     </section>
   );

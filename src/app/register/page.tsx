@@ -78,7 +78,7 @@ export default function Page() {
     const nameWords = formData.fullName.trim().split(/\s+/);
     if (nameWords.length !== 5) {
       setSubmitMessage(
-        "Full name must contain exactly 4 words (Ibrahim Wael Ibrahim Shaban)."
+        "Full name must contain exactly 5 words (as it appears in your official national ID)."
       );
       return;
     }
@@ -237,7 +237,7 @@ export default function Page() {
               onChange={handleChange}
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full"
-              placeholder="Enter your full name ( Ahmed Mohamed Ali Hassan Ahmed)"
+              placeholder="Enter your full name ( as it appears in your official national ID)"
             />
           </div>
 
@@ -337,7 +337,7 @@ export default function Page() {
 
           <div>
             <label htmlFor="grade" className="block text-sm font-medium mb-2">
-              Current Grade *
+              Current Grade * ( in the academic year 2024/2025 )
             </label>
             <select
               id="grade"
