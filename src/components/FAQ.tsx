@@ -8,8 +8,8 @@ import Loader5 from "./Animation_Components/Loader5";
 
 const FAQ = () => {
   return (
-    <section className="mt-20 min-h-screen px-5 lg:px-10 2xl:px-20 flex flex-col md:flex-row md:justify-evenly gap-10 z-10">
-      <div className="md:w-2/4">
+    <section className="mt-20 min-h-screen px-5 lg:px-10 2xl:px-20  space-y-10 z-10">
+      <div className="">
         <motion.div
           {...FadeLeft}
           {...ViewPort}
@@ -34,18 +34,12 @@ const FAQ = () => {
         >
           Providing the best solution, get answers of your common questions.
         </motion.p>
-          
-        <div className="sticky top-2/6 flex justify-center items-center overflow-hidden">
-          <div className=" lg:scale-125"> 
-        <Loader5/>
-          </div>
-        </div>
 
       </div>
       <motion.div
         {...FadeUp}
         {...Animate}
-        className="border-t-2 border-l-2 border-green-600 rounded-4xl  h-fit md:w-2/4 flex flex-col gap-6 py-6 px-10"
+        className="border-t-2 border-l-2 border-green-600 rounded-4xl  h-fit  max-w-5xl mx-auto flex flex-col gap-6 py-6 px-10"
       >
         {FAQData.map((item, i) => (
           <FAQCard key={i} A={item.A} Q={item.Q} />
