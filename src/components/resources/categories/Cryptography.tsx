@@ -1,9 +1,11 @@
-import { GlobeLock } from "lucide-react";
+"use client";
 import React from "react";
-
+import { GlobeLock } from "lucide-react";
+import { motion } from "framer-motion";
+import { FadeUp, ViewPort } from "@/animation/Animations";
 const Cryptography = () => {
   return (
-    <section id="Cryptography" className="py-20">
+    <motion.section {...FadeUp} {...ViewPort} id="Cryptography" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         {" "}
         <GlobeLock size={50} className="text-green-600" /> Cryptography
@@ -61,7 +63,7 @@ const Cryptography = () => {
           </a>
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,9 +1,11 @@
+"use client";
 import { GitPullRequestArrow } from "lucide-react";
-import React from "react";
+import React from "react";import { motion } from "framer-motion";
+import { FadeUp, ViewPort } from "@/animation/Animations";
 
 const OSINT = () => {
   return (
-    <section id="OSINT" className="py-20">
+    <motion.section {...FadeUp} {...ViewPort} id="OSINT" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <GitPullRequestArrow size={50} className="text-green-600" />
         OSINT
@@ -28,7 +30,7 @@ const OSINT = () => {
           OSINT framework
         </a>
       </p>
-    </section>
+    </motion.section>
   );
 };
 

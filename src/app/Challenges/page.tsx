@@ -2,15 +2,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Categories_Challenges } from "@/data/Categories_Challenges";
+import { FadeLeft, opacityWithBlur, ViewPort } from "@/animation/Animations";
 
 export default function Page() {
   return (
     <main className=" min-h-screen px-5 lg:px-10 2xl:px-20 mt-20 overflow-hidden">
-      <h1 className="text-4xl md:text-5xl font-semibold"> Challenges </h1>
+      <motion.h1
+        {...FadeLeft}
+        {...ViewPort}
+        className="text-4xl md:text-5xl font-semibold"
+      >
+        {" "}
+        Challenges{" "}
+      </motion.h1>
       <div className="w-full max-w-7xl mx-auto my-10 overflow-x-auto">
         <table className="w-full max-w-5xl mx-auto my-10 border-collapse  overflow-x-scroll">
           <thead className="overflow-scroll">
-            <tr>
+            <motion.tr {...opacityWithBlur}>
               <th className="text-xl font-semibold text-green-600 min-w-[250px] px-4 py-2 text-left">
                 Challenge
               </th>
@@ -20,11 +28,11 @@ export default function Page() {
               <th className="text-xl font-semibold text-green-600 min-w-[250px] px-4 py-2 text-left">
                 Online Round
               </th>
-            </tr>
+            </motion.tr>
           </thead>
           <tbody>
             {Categories_Challenges.map((item, i) => (
-              <motion.tr key={i} className="   ">
+              <motion.tr key={i} {...opacityWithBlur}>
                 <td className="min-w-[250px] px-4 py-4">
                   <h1 className="text-xl font-bold">{item.title}</h1>
                 </td>

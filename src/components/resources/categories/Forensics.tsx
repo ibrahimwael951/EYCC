@@ -1,9 +1,11 @@
+"use client";
 import { ChartColumn } from "lucide-react";
 import React from "react";
-
+import { motion } from "framer-motion";
+import { FadeUp, ViewPort } from "@/animation/Animations";
 const Forensics = () => {
   return (
-    <section id="Forensics" className="py-20">
+    <motion.section {...FadeUp} {...ViewPort} id="Forensics" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <ChartColumn size={50} className="text-green-600" />
         Forensics
@@ -43,7 +45,7 @@ const Forensics = () => {
           </a>
         </li>
       </ul>
-    </section>
+    </motion.section>
   );
 };
 

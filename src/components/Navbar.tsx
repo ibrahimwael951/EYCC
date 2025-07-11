@@ -67,7 +67,7 @@ const Navbar = () => {
               <div className="absolute top-0 left-0 w-full h-full bg-neutral-900/10 backdrop-blur-xl  -z-10" /> 
               <div className="flex flex-col gap-4">
                 {navData.map((item) => (
-                  <Link
+                  <Link onClick={()=> setIsMenuOpened(false)}
                     key={item.title}
                     href={item.href}
                     className="flex items-center gap-2 text-2xl"

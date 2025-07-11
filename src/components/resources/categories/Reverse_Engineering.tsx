@@ -1,9 +1,11 @@
+"use client";
 import { RotateCcw } from "lucide-react";
-import React from "react";
+import React from "react";import { motion } from "framer-motion";
+import { FadeUp, ViewPort } from "@/animation/Animations";
 
 const Reverse_Engineering = () => {
   return (
-    <section id="Reverse Engineering" className="py-20">
+    <motion.section {...FadeUp} {...ViewPort} id="Reverse Engineering" className="py-20">
       <h1 className="text-3xl font-semibold mb-5 flex items-center gap-2">
         <RotateCcw size={50} className="text-green-600" /> Reverse Engineering
       </h1>
@@ -27,7 +29,7 @@ const Reverse_Engineering = () => {
           0xinfection Reversing Guide
         </a>
       </p>
-    </section>
+    </motion.section>
   );
 };
 

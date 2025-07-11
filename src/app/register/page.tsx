@@ -76,7 +76,7 @@ export default function Page() {
     }
 
     const nameWords = formData.fullName.trim().split(/\s+/);
-    if (nameWords.length !== 4) {
+    if (nameWords.length !== 5) {
       setSubmitMessage(
         "Full name must contain exactly 4 words (Ibrahim Wael Ibrahim Shaban)."
       );
@@ -227,7 +227,7 @@ export default function Page() {
               htmlFor="fullName"
               className="block text-sm font-medium mb-2"
             >
-              Full Name * (4 words required)
+              Full Name * (5 words required)
             </label>
             <input
               type="text"
@@ -237,7 +237,7 @@ export default function Page() {
               onChange={handleChange}
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full"
-              placeholder="Enter your full name ( Ahmed Mohamed Ali Hassan)"
+              placeholder="Enter your full name ( Ahmed Mohamed Ali Hassan Ahmed)"
             />
           </div>
 
