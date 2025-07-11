@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, ChangeEvent, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Animate, FadeLeft, ViewPort } from "@/animation/Animations";
 import Loader1 from "@/components/Animation_Components/Loader1";
 interface FormData {
@@ -197,14 +197,14 @@ export default function Page() {
             </h1>
             {userName && (
               <p className="text-lg mb-4">
-                Hello <span className="text-green-600"> {userName} </span>,
-                you're already registered with us.
+                Hello <span className="text-green-600"> {userName} </span>, you
+                are already registered with us.
               </p>
             )}
             <p className="  mb-6">
               Your registration has been{" "}
               <span className="text-green-600"> Successfully Submitted </span> .
-              You'll be notified about next steps via email.
+              You will be notified about next steps via email.
             </p>
           </div>
         </motion.div>
@@ -222,8 +222,8 @@ export default function Page() {
         {...ViewPort}
         className="text-2xl md:text-3xl font-bold mb-6   leading-tight"
       >
-        Register now to join Egypt's first cybersecurity community for high
-        school students through EYCC. Even if you're new to cybersecurity, you
+        Register now to join Egypts first cybersecurity community for high
+        school students through EYCC. Even if you are new to cybersecurity, you
         can start learning and preparing using our Resources before the
         competition begins
       </motion.h1>
@@ -233,7 +233,7 @@ export default function Page() {
         {...ViewPort}
         className="text-gray-400 mb-8 text-lg"
       >
-        If you're planning to join as part of a team (up to 5 members), each
+        If you are planning to join as part of a team (up to 5 members), each
         member should register individually. Team formation will be handled and
         confirmed later when officially announced.
       </motion.p>
