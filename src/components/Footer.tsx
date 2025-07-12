@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Loader4 from "./Animation_Components/Loader4";
 import { motion } from "framer-motion";
 import { navData } from "@/data/Navbar";
 import Link from "next/link";
