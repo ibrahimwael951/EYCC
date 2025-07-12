@@ -5,8 +5,8 @@ import BackGround from "@/components/Animation_Components/Loader3";
 import { BlurAnimate } from "@/animation/Animations";
 const Why_Participate = () => {
   const WHY = [
-    "Join Egypt’s first-ever cybersecurity competition & community for high schoolers",
-    "If you have potential through learning cybersecurity, this is your opportunity of learning and connecting with like-minded ethical hackers",
+    "Join Egypt’s first-ever cybersecurity competition & community for high schoolers.",
+    "If you have potential through learning cybersecurity, this is your opportunity of learning and connecting with like-minded ethical hackers.",
   ];
 
   return (

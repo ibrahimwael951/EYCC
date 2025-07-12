@@ -31,6 +31,11 @@ const Footer = () => {
             © 2025 EYCC . <br />
             All rights reserved.
           </motion.p>
+          <div className="flex flex-col gap-2">
+            <a className="text-2xl text-green-600 font-semibold border-green-600 hover:border-b"  href="https://discord.gg/YBFUZyqt">  Discord Channel</a>
+            <a className="text-2xl text-green-600 font-semibold border-green-600 hover:border-b"  href="https://whatsapp.com/channel/0029Vb5tjbOIyPtNoIxKIb2a"> WhatsApp Channel</a>
+            <a className="text-2xl text-green-600 font-semibold border-green-600 hover:border-b"  href="https://t.me/+gSyG_91EYYY1YjU0"> Telegram Channel</a>
+          </div>
         </div>
 
         <div className="w-full flex flex-col justify-center items-center md:items-start md:w-96 ">
