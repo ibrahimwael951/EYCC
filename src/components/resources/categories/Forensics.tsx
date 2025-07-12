@@ -11,7 +11,7 @@ const Forensics = () => {
         Forensics
       </h1>
       <div className="p-2 mb-5 w-fit rounded-2xl bg-red-950 text-white text-sm ">
-        Note: the competition is focused on “image forensics”
+        Note: the competition is focused on “file  forensics”
       </div>
       <ul className="list-disc list-inside space-y-5 text-xl mb-5">
         <li>

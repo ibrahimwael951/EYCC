@@ -11,7 +11,7 @@ const Reverse_Engineering = () => {
       </h1>
       <p className="text-xl mb-5">
         A structured and beginner-friendly course covering the fundamentals of
-        reverse engineering:
+        reverse engineering:{" "}
         <a
           className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
           href="https://github.com/0xZ0F/Z0FCourse_ReverseEngineering"

@@ -19,14 +19,14 @@ const Navbar = () => {
       >
         <Link
           href="/"
-          className="p-2 rounded-2xl  flex justify-center items-center gap-2 text-2xl  font-semibold"
+          className="p-2 rounded-2xl  flex justify-center items-center gap-2 text-4xl  font-semibold"
         >
           <Image
             src="/Logo.png"
             alt="Logo"
             width={500}
             height={500}
-            className="w-10 h-10 rounded-full"
+            className="w-14 h-14 rounded-full"
             suppressHydrationWarning={true}
           />
           EYCC
@@ -47,6 +47,7 @@ const Navbar = () => {
             transBg={false}
             className="text-sm"
             animate={false}
+            textSize
           />
           <button
             onClick={() => setIsMenuOpened((prev) => !prev)}

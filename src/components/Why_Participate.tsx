@@ -25,18 +25,20 @@ const Why_Participate = () => {
               {item}
             </motion.p>
           ))}
-        </div>
-        <div>
-          <motion.h1
-            {...BlurAnimate}
-            className="text-4xl md:text-5xl font-semibold"
-          >
-            No<span className="text-green-600"> Experience </span>?
-          </motion.h1>
-          <motion.p {...BlurAnimate} className="text-xl my  -5">
-            No Problem, it is your chance for start learning and competing with
-            others!
-          </motion.p>
+
+          <div>
+            <motion.h1
+              {...BlurAnimate}
+              className="text-4xl md:text-5xl font-semibold"
+            >
+              No<span className="text-green-600"> Experience </span>?
+            </motion.h1>
+            <motion.p {...BlurAnimate} className="text-xl my-5">
+              No big deal if youre new — this is your opportunity to explore
+              cybersecurity, learn from curated resources, and compete with
+              like-minded students in a welcoming, supportive community!
+            </motion.p>
+          </div>
         </div>
 
         <div className="hidden md:inline opacity-35  md:opacity-100 -z-10 absolute right-2/4 -translate-x-2/4 md:right-1/5 top-32  md:translate-x-0 md: w-fit scale-125 h-60">

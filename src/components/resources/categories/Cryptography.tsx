@@ -42,7 +42,7 @@ const Cryptography = () => {
           </li>
         </ul>
         <p className="mb-5 text-xl mt-4">
-          Collection of crypto CTF concepts and tools: 
+          Collection of crypto CTF concepts and tools: {" "}
           <a
             className="hover:border-b border-green-600 text-green-600 font-semibold text-2xl"
             href="https://github.com/ashutosh1206/Crypton"

@@ -10,16 +10,8 @@ import { FadeLeft, FadeRight, ViewPort } from "@/animation/Animations";
 const Footer = () => {
   return (
     <footer className="relative min-h-80 p-5 lg:p-10 mt-80 ">
-      {/* Bg and Animate component */}
-      <div className="absolute -top-10 left-2/4 -translate-x-2/4 scale-50 md:scale-125 -z-10 ">
-        <Loader4 />
-      </div>
       <div className="w-full h-full absolute top-0 left-0 bg-neutral-600/10 backdrop-blur-sm -z-10" />
-
       {/* content */}
-      <p className="text-center font-semibold">
-        The first Cyber Security Competition for Egyptian Youth
-      </p>
       <section className="flex flex-col justify-between items-center md:items-start md:flex-row gap-10  mt-20">
         <div className="flex flex-col gap-10 w-fit">
           <motion.h1

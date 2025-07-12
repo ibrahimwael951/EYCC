@@ -22,7 +22,7 @@ const Hero = () => {
           today and make real progress before the competition.
           <br />
           This page has all the resources to help you learn, explore, and level
-          up at your own pace.9
+          up at your own pace.
         </motion.p>
       </div>
       <div className="md:w-2/4 flex justify-center overflow-hidden"> 
