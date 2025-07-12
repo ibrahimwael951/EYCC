@@ -3,6 +3,7 @@ import React, { useState, ChangeEvent, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Animate, FadeLeft, ViewPort } from "@/animation/Animations";
 import Loader1 from "@/components/Animation_Components/Loader1";
+import Link from "next/link";
 interface FormData {
   fullName: string;
   email: string;
@@ -76,9 +77,9 @@ export default function Page() {
     }
 
     const nameWords = formData.fullName.trim().split(/\s+/);
-    if (nameWords.length !== 5) {
+    if (nameWords.length <= 3) {
       setSubmitMessage(
-        "Full name must contain exactly 5 words (as it appears in your official national ID)."
+        "Full name must contain exactly more than 3 words (as it appears in your official national ID)."
       );
       return;
     }
@@ -92,7 +93,14 @@ export default function Page() {
     setSubmitMessage("");
 
     try {
-      const response = await fetch(`${process.env.NEXT_LOCAL_API}`, {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+      if (!apiUrl) {
+        throw new Error(
+          "API URL is not configured. Please check your environment variables. or Send to our Team in whatsApp and they will fix it <3"
+        );
+      }
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -179,21 +187,29 @@ export default function Page() {
               Welcome to EYCC!
             </h1>
             {userName && (
-              <p className="text-lg mb-4">
+              <p className="text-2xl mb-4">
                 Hello <span className="text-green-600"> {userName} </span>, you
                 are already registered with us.
               </p>
             )}
-            <p className="  mb-6">
-              Your registration has been{" "}
-              <span className="text-green-600"> Successfully Submitted </span> .
-              You will be notified about next steps via email.
+            <p className=" text-xl mb-6">
+              Your registration for the Egyptian Youth Cybersecurity Challenge
+              (EYCC) has been
+              <span className="text-green-600"> Successfully received </span> .
+              We’re excited to welcome you to Egypt’s First Youth Cybersecurity
+              Competition! To stay informed about competition updates,
+              announcements, resources, and community discussions, make sure to
+              join our Official WhatsApp Community:
+              <a className="text-green-600 font-semibold hover:border-b border-green-600 m-2" href="https://chat.whatsapp.com/K40tlGOtIkSK0R3TJRKU40">WhatsApp link</a>
             </p>
           </div>
         </motion.div>
         <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-40 scale-125 md:scale-200 -z-20">
+        <div className="scale-125 lg:scale-150">
           <Loader1 />
         </div>
+        </div>
+
       </main>
     );
   }
@@ -205,9 +221,9 @@ export default function Page() {
         {...ViewPort}
         className="text-2xl md:text-3xl font-bold mb-6   leading-tight"
       >
-        Register now to join Egypts first cybersecurity community for high
+        Register now to join the first cybersecurity community for Egyptian high
         school students through EYCC. Even if you are new to cybersecurity, you
-        can start learning and preparing using our Resources before the
+        can start learning and preparing using our <Link className="text-green-600 hover:border-b border-green-600 m-2" href="/Resources">Resources</Link> before the
         competition begins
       </motion.h1>
 
@@ -225,9 +241,9 @@ export default function Page() {
           <div>
             <label
               htmlFor="fullName"
-              className="block text-sm font-medium mb-2"
+              className="block text-xl font-medium mb-2"
             >
-              Full Name * (5 words required)
+              Full Name *
             </label>
             <input
               type="text"
@@ -242,7 +258,7 @@ export default function Page() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-2">
+            <label htmlFor="email" className="block text-xl font-medium mb-2">
               Email Address *
             </label>
             <input
@@ -258,7 +274,7 @@ export default function Page() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-2">
+            <label htmlFor="phone" className="block text-xl font-medium mb-2">
               Phone Number *
             </label>
             <input
@@ -274,7 +290,7 @@ export default function Page() {
           </div>
 
           <div>
-            <label htmlFor="school" className="block text-sm font-medium mb-2">
+            <label htmlFor="school" className="block text-xl font-medium mb-2">
               School Name *
             </label>
             <input
@@ -292,7 +308,7 @@ export default function Page() {
           <div>
             <label
               htmlFor="governorate"
-              className="block text-sm font-medium mb-2"
+              className="block text-xl font-medium mb-2"
             >
               Governorate *
             </label>
@@ -336,8 +352,8 @@ export default function Page() {
           </div>
 
           <div>
-            <label htmlFor="grade" className="block text-sm font-medium mb-2">
-              Current Grade * ( in the academic year 2024/2025 )
+            <label htmlFor="grade" className="block text-xl font-medium mb-2">
+              Current Grade * 
             </label>
             <select
               id="grade"
@@ -347,7 +363,7 @@ export default function Page() {
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full bg-black"
             >
-              <option value="">Select your grade</option>
+              <option value="">Select your grade as in the academic year 2024/2025 </option>
               <option value="Grade 9">Grade 9</option>
               <option value="Grade 10">Grade 10</option>
               <option value="Grade 11">Grade 11</option>

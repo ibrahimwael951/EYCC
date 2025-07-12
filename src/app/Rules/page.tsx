@@ -13,7 +13,7 @@ export default function Page() {
           className="flex items-center gap-1 bg-neutral-900 w-fit px-3 py-1 rounded-2xl "
         >
           <div className="w-3 h-3 animate-pulse bg-green-600 rounded-full " />
-          Rules
+          Format & Rules
         </motion.div>
         <motion.h1
           {...FadeLeft}
@@ -58,7 +58,7 @@ export default function Page() {
             Top-performing teams from the online qualification round will be
             invited to compete in the on-site final round. More details about
             the date, location, and format of this round will be announced
-            soon.”
+            soon.
           </p>
         </motion.div>
       </section>

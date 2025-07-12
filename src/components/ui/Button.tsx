@@ -6,6 +6,7 @@ import Link from "next/link";
 
 interface Props {
   text: string;
+  textSize?: boolean;
   rotate?: boolean;
   transBg?: boolean;
   className?: string;
@@ -22,6 +23,7 @@ const Button: React.FC<Props> = ({
   transBg = true,
   delay = 0,
   href,
+  textSize =false,
 }) => {
   if (href)
     return (
@@ -33,6 +35,7 @@ const Button: React.FC<Props> = ({
           delay={delay}
           rotate={rotate}
           transBg={transBg}
+          textSize={textSize}
         />
       </Link>
     );
@@ -51,14 +54,16 @@ const Button: React.FC<Props> = ({
           transition: { delay: delay },
         },
       })}
+      
       className={` 
                 ${className}
-                rounded-2xl p-3 duration-150 border border-green-600 cursor-pointer
+                 rounded-2xl p-3 duration-150 border border-green-600 cursor-pointer
                 ${
                   transBg
                     ? "bg-transparent hover:bg-green-600 hover:text-white text-green-600"
                     : "bg-green-600 hover:bg-transparent hover:text-green-600 text-white"
                 }
+                ${textSize && "md:text-xl lg:text-2xl"}
             `}
     >
       {text}
