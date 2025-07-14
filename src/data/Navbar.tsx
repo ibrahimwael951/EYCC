@@ -24,7 +24,7 @@ export const navData: NavData[] = [
   { title: "Home ", href: "/ ", icon: Home },
   { title: "About ", href: "/About ", icon: User },
   { title: "FAQs", href: "/faq", icon: ShieldQuestionMark },
-  { title: "Rules", href: "/Rules", icon: Scale },
+  { title: "Format", href: "/Rules", icon: Scale },
   { title: "Challenges ", href: "/Challenges ", icon: Swords },
   { title: "Resources  ", href: "/Resources ", icon: Database },
 ];

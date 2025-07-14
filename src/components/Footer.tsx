@@ -47,7 +47,7 @@ const Footer = () => {
             {...ViewPort}
             className="text-3xl font-semibold"
           >
-            Social Link
+            Stay Connected
           </motion.h1>
           <div className="flex flex-col items-center md:items-start gap-4 mt-4 ml-3 ">
             {Social_Links.map((item) => (
@@ -72,7 +72,7 @@ const Footer = () => {
             {...ViewPort}
             className="text-3xl font-semibold"
           >
-            Links
+           Quick Links
           </motion.h1>
           <div className="flex flex-col items-center md:items-start gap-4 mt-4 ml-3 ">
             {navData.map((item) => (

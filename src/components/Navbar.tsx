@@ -19,23 +19,23 @@ const Navbar = () => {
       >
         <Link
           href="/"
-          className="p-2 rounded-2xl  flex justify-center items-center gap-2 text-4xl  font-semibold"
+          className="p-2 rounded-2xl  flex justify-center items-center gap-2 text-3xl  font-semibold"
         >
           <Image
             src="/very black.png"
             alt="Logo"
             width={500}
             height={500}
-            className="w-14 h-14 rounded-full"
+            className="w-12 h-12 rounded-full"
             suppressHydrationWarning={true}
           />
           EYCC
         </Link>
 
-        <div className="hidden md:flex justify-center items-center gap-5 bg-neutral-900 rounded-2xl p-4 ">
+        <div className="hidden md:flex justify-center items-center  bg-neutral-900 rounded-2xl  ">
           {navData.map((item, i) => (
             <Link key={i} href={item.href}>
-              <motion.div>{item.title}</motion.div>
+              <motion.div className="p-4">{item.title}</motion.div>
             </Link>
           ))}
         </div>
@@ -45,9 +45,9 @@ const Navbar = () => {
             text="Registration"
             rotate={false}
             transBg={false}
-            className="text-sm"
+            className="md:text-lg"
             animate={false}
-            textSize
+             
           />
           <button
             onClick={() => setIsMenuOpened((prev) => !prev)}
