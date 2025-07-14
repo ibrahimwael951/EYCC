@@ -23,7 +23,7 @@ const Footer = () => {
               alt="Logo"
               width={500}
               height={500}
-              className=" w-10 h-10 "
+              className=" w-20 h-20 object-cover "
             />
             <div className="-m-2 rotate-90 bg-white opacity-20 w-10  h-1"/>
             <Image
@@ -31,7 +31,7 @@ const Footer = () => {
               alt="hackclub"
               width={500}
               height={500}
-              className=" w-10 h-10 "
+              className=" w-20 h-20 object-cover"
             />
         
           </motion.h1>
