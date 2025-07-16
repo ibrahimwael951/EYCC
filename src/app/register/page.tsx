@@ -189,7 +189,7 @@ export default function Page() {
             {userName && (
               <p className="text-2xl mb-4">
                 Hello <span className="text-green-600"> {userName} </span>, you
-                are already registered with us.
+                are registered with us.
               </p>
             )}
             <p className=" text-xl mb-6">

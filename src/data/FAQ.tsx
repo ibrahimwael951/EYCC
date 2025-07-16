@@ -13,7 +13,7 @@ export const FAQ: FAQData[] = [
   },
   {
     Q: "When is the online round and how long does it last?",
-    A: "The online qualification round will start on Aug X, 2025, and run for two continuous days (48 hours). During this time, participants can solve the challenges at their own pace within the allowed period.",
+    A: "The online qualification round will start on Aug 26, 2025, and run for two continuous days (48 hours). During this time, participants can solve the challenges at their own pace within the allowed period.",
   },
   {
     Q: "Can I participate in a team ?",

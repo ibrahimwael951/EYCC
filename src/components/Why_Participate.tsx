@@ -34,7 +34,7 @@ const Why_Participate = () => {
               No<span className="text-green-600"> Experience </span>?
             </motion.h1>
             <motion.p {...BlurAnimate} className="text-xl my-5">
-              No big deal if youre new — this is your opportunity to explore
+              No big deal if you are new — this is your opportunity to explore
               cybersecurity, learn from curated resources, and compete with
               like-minded students in a welcoming, supportive community!
             </motion.p>

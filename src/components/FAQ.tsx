@@ -67,7 +67,7 @@ export const FAQCard: React.FC<props> = ({ A, Q }) => {
           <motion.p
             {...FadeLeft}
             {...Animate}
-            className="text-lg bg-green-600 rounded-2xl p-2  "
+            className="text-lg  border border-green-600 rounded-2xl p-2  "
           >
             {A}
           </motion.p>
