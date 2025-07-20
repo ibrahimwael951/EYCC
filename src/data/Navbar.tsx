@@ -16,7 +16,7 @@ interface NavData {
 interface Social {
   title: string;
   Link: string;
-  icon: string;
+  icon: string ;
 }
 
 
@@ -35,7 +35,7 @@ export const Social_Links:Social[] = [
     icon: "/whatsapp.png",
   },
   {
-    title: "Discord Channel",
+    title: "Discord Server",
     Link: "https://discord.gg/YBFUZyqt",
     icon: "/discord.png",
   },

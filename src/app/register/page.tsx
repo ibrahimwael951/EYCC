@@ -1,9 +1,12 @@
 "use client";
 import React, { useState, ChangeEvent, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Social_Links } from "@/data/Navbar";
 import { Animate, FadeLeft, ViewPort } from "@/animation/Animations";
 import Loader1 from "@/components/Animation_Components/Loader1";
 import Link from "next/link";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 interface FormData {
   fullName: string;
   email: string;
@@ -181,10 +184,18 @@ export default function Page() {
           {...ViewPort}
           className="max-w-2xl mx-auto text-center"
         >
-          <div className="  rounded-2xl p-8">
-            <div className="  text-6xl mb-4">✓</div>
+          <div className=" rounded-2xl p-8">
+            <div className=" flex justify-center   text-6xl mb-4">
+              <Image
+                src="/very black.png"
+                alt="Logo"
+                width={500}
+                height={500}
+                className=" w-20 h-20 object-cover "
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4  ">
-              Welcome to EYCC!
+              Welcome to <span className="text-green-600"> EYCC </span>!
             </h1>
             {userName && (
               <p className="text-2xl mb-4">
@@ -199,44 +210,59 @@ export default function Page() {
               We’re excited to welcome you to Egypt’s First Youth Cybersecurity
               Competition! To stay informed about competition updates,
               announcements, resources, and community discussions, make sure to
-              join our Official WhatsApp Community:
-              <a className="text-green-600 font-semibold hover:border-b border-green-600 m-2" href="https://chat.whatsapp.com/K40tlGOtIkSK0R3TJRKU40">WhatsApp link</a>
+              join our Official WhatsApp Community
             </p>
+            <div className="flex justify-center items-center gap-4">
+              <a
+                href="mailto:eycc@stemeghackclub.org"
+                className="flex justify-center md:justify-start items-center gap-2 text-2xl cursor-pointer"
+              >
+                <Mail className="w-11 h-11 text-white " />
+              </a>
+              {Social_Links.map((item, i) => (
+                <a href={item.Link} key={i}>
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={50}
+                    height={50}
+                    className="w-10 h-10"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </motion.div>
-        <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-40 scale-125 md:scale-200 -z-20">
-        <div className="scale-125 lg:scale-150">
-          <Loader1 />
+        <div className="absolute top-2/4 left-2/4 -translate-2/4 opacity-10 scale-125 md:scale-200 -z-20">
+          <div className="scale-125 lg:scale-150">
+            <Loader1 />
+          </div>
         </div>
-        </div>
-
       </main>
     );
   }
 
   return (
     <main className="min-h-screen px-5 lg:px-10 2xl:px-20 py-8 mt-20">
-      <motion.h1
-        {...FadeLeft}
-        {...ViewPort}
-        className="text-2xl md:text-3xl font-bold mb-6   leading-tight"
-      >
+      <h1 className="text-2xl md:text-3xl font-bold mb-6   leading-tight">
         Register now to join the first cybersecurity community for Egyptian high
         school students through EYCC. Even if you are new to cybersecurity, you
-        can start learning and preparing using our <Link className="text-green-600 hover:border-b border-green-600 m-2" href="/Resources">Resources</Link> before the
-        competition begins
-      </motion.h1>
+        can start learning and preparing using our{" "}
+        <Link
+          className="text-green-600 hover:border-b border-green-600 m-2"
+          href="/Resources"
+        >
+          Resources
+        </Link>{" "}
+        before the competition begins
+      </h1>
 
-      <motion.p
-        {...FadeLeft}
-        {...ViewPort}
-        className="text-gray-400 mb-8 text-lg"
-      >
+      <p className="text-gray-400 mb-8 text-lg">
         If you are planning to join as part of a team (up to 5 members), each
         member should register individually. Team formation will be handled and
         confirmed later when officially announced.
-      </motion.p>
-      <motion.div {...FadeLeft} {...ViewPort} className="max-w-2xl mx-auto">
+      </p>
+      <div className="max-w-2xl mx-auto">
         <div className="space-y-6">
           <div>
             <label
@@ -353,7 +379,7 @@ export default function Page() {
 
           <div>
             <label htmlFor="grade" className="block text-xl font-medium mb-2">
-              Current Grade * 
+              Current Grade *
             </label>
             <select
               id="grade"
@@ -363,7 +389,9 @@ export default function Page() {
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full bg-black"
             >
-              <option value="">Select your grade as in the academic year 2024/2025 </option>
+              <option value="">
+                Select your grade as in the academic year 2024/2025{" "}
+              </option>
               <option value="Grade 9">Grade 9</option>
               <option value="Grade 10">Grade 10</option>
               <option value="Grade 11">Grade 11</option>
@@ -391,7 +419,7 @@ export default function Page() {
             </motion.div>
           )}
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 }
