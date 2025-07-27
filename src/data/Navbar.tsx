@@ -36,7 +36,7 @@ export const Social_Links:Social[] = [
   },
   {
     title: "Discord Server",
-    Link: "https://discord.gg/YBFUZyqt",
+    Link: "https://discord.gg/BftPphcFma",
     icon: "/discord.png",
   },
   {
