@@ -263,7 +263,7 @@ export default function Page() {
               onChange={handleChange}
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full"
-              placeholder="Enter your email address"
+              placeholder="Enter your personal Email address"
             />
           </div>
 
@@ -279,7 +279,7 @@ export default function Page() {
               onChange={handleChange}
               required
               className="text-xl p-4 rounded-2xl outline-none border-t border-l  border-green-600 text-white w-full"
-              placeholder="Enter your phone number"
+              placeholder="Enter your personal phone number"
             />
           </div>
 
