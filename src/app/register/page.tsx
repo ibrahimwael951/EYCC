@@ -84,7 +84,7 @@ export default function Page() {
       return;
     }
     const NumberLength = formData.phone;
-    if (NumberLength.length !== 11) {
+    if (NumberLength.trim().length !== 11) {
       setSubmitMessage("Write your full number so we can contact with you");
       return;
     }
