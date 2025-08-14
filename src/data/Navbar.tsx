@@ -6,6 +6,7 @@ import {
   Database,
   ShieldQuestionMark,
   Home,
+  SquareUserRound,
 } from "lucide-react";
 
 interface NavData {
@@ -16,9 +17,8 @@ interface NavData {
 interface Social {
   title: string;
   Link: string;
-  icon: string ;
+  icon: string;
 }
-
 
 export const navData: NavData[] = [
   { title: "Home ", href: "/ ", icon: Home },
@@ -27,8 +27,10 @@ export const navData: NavData[] = [
   { title: "Format", href: "/Rules", icon: Scale },
   { title: "Challenges ", href: "/Challenges ", icon: Swords },
   { title: "Resources  ", href: "/Resources ", icon: Database },
+  { title: "Ambassadors", href: "/ambassador ", icon: SquareUserRound },
+
 ];
-export const Social_Links:Social[] = [
+export const Social_Links: Social[] = [
   {
     title: "WhatsApp Channel",
     Link: "https://whatsapp.com/channel/0029Vb5tjbOIyPtNoIxKIb2a",

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Roboto } from "next/font/google";
 
 import Footer from "@/components/Footer";
+import RecaptchaProviderWrapper from "./RecaptchaProviderWrapper";
 
 const myFont = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -23,12 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"> 
-      <body className={`${myFont.className}`}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+    <html lang="en">
+      <RecaptchaProviderWrapper>
+        <body className={`${myFont.className}`}>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </RecaptchaProviderWrapper>
     </html>
   );
 }

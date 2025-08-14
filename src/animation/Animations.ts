@@ -32,7 +32,7 @@ export const opacity = {
 };
 export const opacityWithBlur = {
   initial: { filter: "blur(20px)", opacity: 0 },
-  whileInView: { filter: "blur(0px)", opacity: 1 },
+  animate: { filter: "blur(0px)", opacity: 1 },
 };
 export const BlurAnimate = {
   initial: { filter: "blur(20px)", scale: 0.8 },

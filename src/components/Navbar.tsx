@@ -32,7 +32,7 @@ const Navbar = () => {
           EYCC
         </Link>
 
-        <div className="hidden md:flex justify-center items-center  bg-neutral-900 rounded-2xl  ">
+        <div className="hidden lg:flex justify-center items-center  bg-neutral-900 rounded-2xl  ">
           {navData.map((item, i) => (
             <Link key={i} href={item.href}>
               <motion.div className="p-4">{item.title}</motion.div>
@@ -51,7 +51,7 @@ const Navbar = () => {
           />
           <button
             onClick={() => setIsMenuOpened((prev) => !prev)}
-            className="md:hidden bg-neutral-900 p-2 rounded-2xl"
+            className="lg:hidden bg-neutral-900 p-2 rounded-2xl"
           >
             <Menu size={34} />
           </button>
@@ -63,7 +63,7 @@ const Navbar = () => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}
-              className="fixed top-0 pt-20 p-5 w-full z-40 md:hidden"
+              className="fixed top-0 pt-20 p-5 w-full z-40 lg:hidden"
             >
               <div className="absolute top-0 left-0 w-full h-full bg-neutral-900/10 backdrop-blur-xl  -z-10" /> 
               <div className="flex flex-col gap-4">
