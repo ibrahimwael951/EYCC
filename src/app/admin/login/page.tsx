@@ -29,7 +29,7 @@ export default function AdminLogin() {
       const recaptchaToken = await executeRecaptcha("admin_login");
 
       const res = await fetch(
-        "https://api.expertfle.org/hackclub/api/admin_login.php",
+        process.env.NEXT_PUBLIC_API_URL + "/admin/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

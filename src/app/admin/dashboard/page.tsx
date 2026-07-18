@@ -62,14 +62,14 @@ export default function AdminDashboard() {
 
       try {
         const res = await fetch(
-          "https://api.expertfle.org/hackclub/api/admin_dashboard.php",
+          process.env.NEXT_PUBLIC_API_URL + "/admin/dashboard",
           {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
             },
-          }
+          },
         );
 
         const result: ApiResponse = await res.json();
